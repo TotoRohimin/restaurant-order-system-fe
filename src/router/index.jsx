@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import AppShell from "../components/templates/AppShell";
 import Dashboard from "../pages/Dashboard";
-import MenuConvert from "../pages/MenuConvert";
 
 export default function root() {
   const dataRoute = [
@@ -39,10 +38,6 @@ export default function root() {
         {
           path: "/rating",
           element: <h1>Rating</h1>,
-        },
-        {
-          path: "/admin/menuconvert",
-          element: <MenuConvert />,
         },
       ],
     },
