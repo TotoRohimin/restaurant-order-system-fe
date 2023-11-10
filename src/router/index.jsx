@@ -34,7 +34,7 @@ export default function root() {
         },
         {
           path: "/menu",
-          element: <MenuConvert />,
+          element: <h1>Menu</h1>,
         },
         {
           path: "/rating",
