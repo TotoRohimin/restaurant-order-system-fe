@@ -9,12 +9,12 @@ const UploadFile = () => {
   };
 
   return (
-    <div>
+    <div className="flex">
       <label className="block text-2xl font-semibold mb-4"></label>
-      <div className="border-dashed border-2 border-gray-400 p-4 mb-4">
-        <input type="file" accept=".csv" onChange={handleFileChange} className="hidden" id="file-input" />
-        <label htmlFor="file-input" className="cursor-pointer">
-          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="border-dashed border-2 border-black rounded-2xl bg-gray-300 p-4 mb-4 w-11/12 h-80 flex justify-center items-center">
+        <input type="file" accept=".csv" onChange={handleFileChange} className="hidden w-full" id="file-input" />
+        <label htmlFor="file-input" className="cursor-pointer flex items-center">
+          <svg width="40" height="40" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-5">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -22,7 +22,10 @@ const UploadFile = () => {
               fill="#919191"
             />
           </svg>
-          Tarik atau unggah file anda kesini Format: csv. Size: maks. 10 mb
+          <div className="ml-6">
+            <p className="text-lg">Tarik atau unggah file anda kesini</p>
+            <p className="text-sm">Format: csv. Size: maks. 10 mb</p>
+          </div>
         </label>
         {selectedFile && <span className="ml-2">{selectedFile.name}</span>}
       </div>
